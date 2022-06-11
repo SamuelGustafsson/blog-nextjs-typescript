@@ -1,8 +1,14 @@
 .container {
+    display: grid;
+    row-gap: 16px;
     background-color: white;
     padding: 24px;
 }
 
 .container:hover {
     cursor: pointer;
+}
+
+.title {
+    margin: 0;
 }

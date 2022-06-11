@@ -9,9 +9,9 @@ export type Props = {
 export default function GallaryItem({ title, content, createdAt }: Props) {
   return (
     <div className={styles.container}>
-      <h2>{title}</h2>
+      <h2 className={styles.title}>{title}</h2>
       <p>{content}</p>
-      <p>{createdAt}</p>
+      <em>{createdAt}</em>
     </div>
   );
 }
