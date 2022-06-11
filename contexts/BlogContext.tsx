@@ -1,8 +1,10 @@
-import { useContext, createContext, ReactNode, useState } from 'react';
-import { BlogPost, Post } from '@/types/blog';
-import { convertStringToSlug } from '@/helpers/convertStringToSlug';
-import mockedBlog from '../mocks/blogPosts.json';
 import Router from 'next/router';
+import { createContext, ReactNode, useContext, useState } from 'react';
+
+import { convertStringToSlug } from '@/helpers/convertStringToSlug';
+import { BlogPost, Post } from '@/types/blog';
+
+import mockedBlog from '../mocks/blogPosts.json';
 
 type blogContextType = {
   posts: BlogPost[];
@@ -64,8 +66,6 @@ export function BlogProvider({ children }: Props) {
         date: postToBeEdit.date,
         slug: convertStringToSlug(post.heading),
       };
-
-      console.log('HALLÅÅ', updatedPost);
 
       setPosts((prevPosts) => {
         return prevPosts.map((post) => {
