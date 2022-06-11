@@ -80,7 +80,7 @@ export default function PostFormEdit({ post }: { post: BlogPost }) {
             <Textarea
               rows={6}
               {...register('preamble', {
-                required: 'fältet får inte vara tomt',
+                required: 'Fältet får inte vara tomt',
                 maxLength: {
                   value: preamble.maxLength,
                   message: `Ingressen får inte vara längre än ${preamble.maxLength} tecken`,
@@ -98,7 +98,7 @@ export default function PostFormEdit({ post }: { post: BlogPost }) {
             <Textarea
               rows={15}
               {...register('text', {
-                required: 'fältet får inte vara tomt',
+                required: 'Fältet får inte vara tomt',
               })}
               defaultValue={post.text}
             />
@@ -116,12 +116,14 @@ export default function PostFormEdit({ post }: { post: BlogPost }) {
                 required: 'Fältet får inte var tomt',
                 maxLength: {
                   value: author.name.maxLength,
-                  message: 'Namnet får inte vara längre än 40 tecken',
+                  message: `Namnet får inte vara längre än ${author.name.maxLength} tecken`,
                 },
               })}
               defaultValue={post.author.name}
             />
-            {errors.name && <span>{errors.name.message}</span>}
+            {errors.name?.message && (
+              <InputErrorMessage message={errors.name.message} />
+            )}
           </InputContainer>
 
           <InputContainer>
@@ -138,7 +140,9 @@ export default function PostFormEdit({ post }: { post: BlogPost }) {
               })}
               defaultValue={post.author.email}
             />
-            {errors.email && <span>{errors.email.message}</span>}
+            {errors.email?.message && (
+              <InputErrorMessage message={errors.email.message} />
+            )}
           </InputContainer>
         </FieldSet>
 

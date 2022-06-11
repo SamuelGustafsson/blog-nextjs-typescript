@@ -112,7 +112,7 @@ export default function PostFormAdd() {
                 required: 'Fältet får inte var tomt',
                 maxLength: {
                   value: author.name.maxLength,
-                  message: 'Namnet får inte vara längre än 40 tecken',
+                  message: `Namnet får inte vara längre än ${author.name.maxLength} tecken`,
                 },
               })}
             />
