@@ -12,7 +12,6 @@ type Props = {
 };
 
 export const Button = ({ theme, children, onClick }: Props) => {
-  //   const buttonStyle = type ? styles[type] : styles.neutral;
   const defaultStyle: ButtonStyles = 'neutral';
 
   return (
