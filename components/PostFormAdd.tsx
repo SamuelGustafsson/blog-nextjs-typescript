@@ -106,7 +106,7 @@ export default function PostFormAdd() {
 
         <FieldSet>
           <InputContainer>
-            <label htmlFor="name">Namn</label>
+            <label htmlFor="name">Författare</label>
             <Input
               {...register('name', {
                 required: 'Fältet får inte var tomt',
