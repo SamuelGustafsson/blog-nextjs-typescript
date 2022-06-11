@@ -1,0 +1,7 @@
+.buttons {
+    display: grid;
+    column-gap: 16px;
+    grid-template-columns: auto auto 1fr;
+    margin-top: 16px;
+    height: max-content;
+  }

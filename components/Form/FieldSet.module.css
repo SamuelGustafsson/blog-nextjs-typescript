@@ -1,0 +1,7 @@
+.fieldset {
+    display: grid;
+    grid-auto-rows: max-content;
+    row-gap: 16px;
+    border: none;
+    padding: 0;
+  }

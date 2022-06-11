@@ -1,0 +1,6 @@
+.inputContainer {
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-auto-flow: row;
+    row-gap: 8px;
+  }

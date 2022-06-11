@@ -1,0 +1,27 @@
+.container {
+    display: grid;
+    color: #3a3a3a;
+    max-width: 1440px;
+    padding: 10px 24px;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto
+}
+
+.ctaContainer {
+    display: grid;
+    align-items: center;
+    justify-items: end;
+}
+
+.addPostBtn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.addPostBtn:hover {
+    cursor: pointer;
+    color: #0a0a0a;
+    background-color: white;
+}

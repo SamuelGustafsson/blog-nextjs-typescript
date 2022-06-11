@@ -1,0 +1,9 @@
+.form {
+    display: grid;
+    grid-auto-rows: max-content;
+    row-gap: 16px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    padding: 24px 16px;
+  }
