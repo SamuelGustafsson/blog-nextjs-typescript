@@ -53,7 +53,7 @@ function BlogPage() {
           </div>
           <div className={styles.buttons}>
             <Link href={`${post.slug}/edit`}>
-              <Button>Editera post</Button>
+              <Button>Redigera</Button>
             </Link>
             <Button theme="danger" onClick={() => deletePost(post.id)}>
               Ta bort
