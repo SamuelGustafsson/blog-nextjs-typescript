@@ -125,7 +125,7 @@ export default function PostFormEdit({ post }: { post: BlogPost }) {
           </InputContainer>
 
           <InputContainer>
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">E-postadress</label>
             <Input
               placeholder="Mejladress"
               {...register('email', {
@@ -133,7 +133,7 @@ export default function PostFormEdit({ post }: { post: BlogPost }) {
                 pattern: {
                   value:
                     /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                  message: 'Ogiltig mejladress',
+                  message: 'Ogiltig e-postadress',
                 },
               })}
               defaultValue={post.author.email}

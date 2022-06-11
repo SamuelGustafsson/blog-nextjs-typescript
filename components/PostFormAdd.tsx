@@ -122,14 +122,14 @@ export default function PostFormAdd() {
           </InputContainer>
 
           <InputContainer>
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">E-postadress</label>
             <Input
               {...register('email', {
                 required: 'Fältet får inte vara tomt',
                 pattern: {
                   value:
                     /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                  message: 'Ogiltig mejladress',
+                  message: 'Ogiltig e-postadress',
                 },
               })}
             />
