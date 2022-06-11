@@ -56,7 +56,7 @@ function BlogPage() {
               <Button>Editera post</Button>
             </Link>
             <Button theme="danger" onClick={() => deletePost(post.id)}>
-              Tabort
+              Ta bort
             </Button>
           </div>
         </main>
