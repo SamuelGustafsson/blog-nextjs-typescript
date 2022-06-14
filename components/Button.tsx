@@ -1,3 +1,4 @@
+import React from 'react';
 import { ReactNode } from 'react';
 
 import styles from './Button.module.css';
@@ -26,3 +27,5 @@ export const Button = React.forwardRef<HTMLButtonElement, Props>(
     );
   },
 );
+
+Button.displayName = 'Button';
