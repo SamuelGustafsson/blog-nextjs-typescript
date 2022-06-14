@@ -11,12 +11,18 @@ type Props = {
   type?: 'submit' | 'reset' | 'button';
 };
 
-export const Button = ({ theme, children, onClick }: Props) => {
-  const defaultStyle: ButtonStyles = 'neutral';
+export const Button = React.forwardRef<HTMLButtonElement, Props>(
+  ({ theme, children, onClick }, ref) => {
+    const defaultStyle: ButtonStyles = 'neutral';
 
-  return (
-    <button className={styles[theme ?? defaultStyle]} onClick={onClick}>
-      {children}
-    </button>
-  );
-};
+    return (
+      <button
+        ref={ref}
+        className={styles[theme ?? defaultStyle]}
+        onClick={onClick}
+      >
+        {children}
+      </button>
+    );
+  },
+);
