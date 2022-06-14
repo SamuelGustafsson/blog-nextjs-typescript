@@ -32,6 +32,7 @@ function BlogPage() {
             height="285px"
             width="430px"
             layout="responsive"
+            priority
           />
           <div>
             <h2>{post.heading}</h2>
